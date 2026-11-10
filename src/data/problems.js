@@ -1,0 +1,13 @@
+// Original practice prompts inspired by beginner programming skills; not copied AtCoder statements.
+export const problems = [
+{id:'p001',title:'两数之和',category:'输入输出',level:'入门',description:'输入两个整数 a 和 b，输出它们的和。',input:'3 7',output:'10',hint:'使用 input().split() 和 map(int, ...)。',concept:'输入、变量、print',solution:'a, b = map(int, input().split())\nprint(a + b)'},
+{id:'p002',title:'奇数还是偶数',category:'条件判断',level:'入门',description:'输入一个整数 n。如果 n 是偶数则输出 Even，否则输出 Odd。',input:'13',output:'Odd',hint:'试试取模运算符 %。',concept:'if、else、取模',solution:'n = int(input())\nprint("Even" if n % 2 == 0 else "Odd")'},
+{id:'p003',title:'乘积的奇偶性',category:'条件判断',level:'入门',description:'输入两个整数 a 和 b。如果 a×b 是偶数则输出 Even，否则输出 Odd。',input:'3 4',output:'Even',hint:'如果其中一个数是偶数，乘积会怎样？',concept:'逻辑条件、取模',solution:'a, b = map(int, input().split())\nprint("Even" if a * b % 2 == 0 else "Odd")',source:'https://atcoder.jp/contests/abs/tasks/abc086_a'},
+{id:'p004',title:'三个数字中有几个 1',category:'字符串',level:'入门',description:'输入由三个字符组成的 0/1 字符串，输出字符 1 的数量。',input:'101',output:'2',hint:'字符串有 count 方法。',concept:'字符串、count',solution:'s = input()\nprint(s.count("1"))',source:'https://atcoder.jp/contests/abs/tasks/abc081_a'},
+{id:'p005',title:'1 到 N 的总和',category:'循环',level:'入门',description:'输入正整数 n，输出 1+2+...+n 的结果。',input:'5',output:'15',hint:'先用 for i in range(1, n + 1) 累加。',concept:'for 循环、range',solution:'n = int(input())\ntotal = 0\nfor i in range(1, n + 1):\n    total += i\nprint(total)'},
+{id:'p006',title:'找出最大值',category:'列表',level:'入门',description:'第一行输入整数 n，第二行输入 n 个整数，输出其中最大值。',input:'4\n2 9 1 5',output:'9',hint:'将第二行转成 list，再使用 max。',concept:'list、map、max',solution:'n = int(input())\na = list(map(int, input().split()))\nprint(max(a))'},
+{id:'p007',title:'计算大于等于 60 的人数',category:'列表',level:'入门',description:'第一行输入 n，第二行输入 n 个分数。输出不低于 60 分的人数。',input:'5\n80 55 60 42 91',output:'3',hint:'可以遍历列表，对满足条件的元素计数。',concept:'循环、条件、计数',solution:'n = int(input())\na = list(map(int, input().split()))\nprint(sum(x >= 60 for x in a))'},
+{id:'p008',title:'去掉重复数字',category:'集合',level:'入门',description:'第一行输入 n，第二行输入 n 个整数。输出不同整数的数量。',input:'6\n1 2 2 3 1 4',output:'4',hint:'set 可以去重。',concept:'set、去重',solution:'n = int(input())\na = list(map(int, input().split()))\nprint(len(set(a)))'},
+{id:'p009',title:'次数最多的字母',category:'字典',level:'入门',description:'输入一个仅由小写英文字母组成的字符串，输出字母 a 出现的次数。',input:'banana',output:'3',hint:'可用 count，也可以自己用字典统计。',concept:'字符串、计数',solution:'s = input()\nprint(s.count("a"))'},
+{id:'p010',title:'按从小到大排序',category:'列表',level:'入门',description:'第一行输入 n，第二行输入 n 个整数。按升序输出这些数，用空格隔开。',input:'5\n9 1 4 2 7',output:'1 2 4 7 9',hint:'sorted() + print(*a)。',concept:'sorted、解包输出',solution:'n = int(input())\na = list(map(int, input().split()))\nprint(*sorted(a))'}
+]
